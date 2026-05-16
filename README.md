@@ -86,7 +86,6 @@ The plugin handles structural mismatches gracefully:
 2. **Add the class** `equalizer-parent` to your grid/row container.
 3. **Done.** The plugin automatically detects and levels your headers, text, and lists on the frontend.
 
-> **Builder Safe:** The script automatically goes dormant when you open backend editors (Breakdance, Elementor, Bricks, Gutenberg) to ensure design environment stability.
 
 ---
 
