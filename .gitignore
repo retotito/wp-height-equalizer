@@ -1,0 +1,14 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Node
+node_modules/
