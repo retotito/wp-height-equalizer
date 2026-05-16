@@ -54,6 +54,21 @@ The plugin targets grids where every individual card is a **direct sibling** und
 
 Avoid using this on multi-column layouts where cards are stacked vertically inside separate column silos. The DOM structure places them in isolated branches — the plugin cannot match cards across different column elements.
 
+```
+       VISUAL LAYOUT (On Screen)               DOM STRUCTURE (In Code)
+   =================================      =================================
+   [   COLUMN 1   ]   [   COLUMN 2   ]      [equalizer-parent]
+   +--------------+   +--------------+        ├── [Column element 1]
+   |  [ Card A ]  | = |  [ Card C ]  | <──┐   │     ├── [Card A] (Index 0)
+   |  (Index 0)   | Y |  (Index 0)   |    │   │     └── [Card B] (Index 1)
+   +--------------+ L +--------------+    ├───┼── [Column element 2]
+   |  [ Card B ]  | E |  [ Card D ]  | <──┘   │     ├── [Card C] (Index 0)
+   |  (Index 1)   | V |  (Index 1)   |        └──   └── [Card D] (Index 1)
+   +--------------+ E +--------------+
+                    L
+   ========================================================================
+```
+
 ---
 
 ## Developer-Friendly Error Logging
